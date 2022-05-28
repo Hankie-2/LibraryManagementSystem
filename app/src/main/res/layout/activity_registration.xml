@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1a1115"
+    tools:context=".authentication.RegistrationActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/monsterratbold"
+        android:text="Sacred Knowledge"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.514" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="350dp"
+        android:layout_height="500dp"
+        app:cardBackgroundColor="#2b1f22"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/monsterratregular"
+            android:text="Регистрация"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="26sp" />
+
+        <EditText
+            android:id="@+id/usernameRegister"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="150dp"
+            android:background="#83D25A63"
+            android:fontFamily="@font/monsterratregular"
+            android:hint="Введите логин: "
+            android:paddingLeft="30dp" />
+
+        <EditText
+            android:id="@+id/passwordRegister"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="210dp"
+            android:background="#83D25A63"
+            android:fontFamily="@font/monsterratregular"
+            android:hint="Введите пароль: "
+            android:inputType="textPassword"
+            android:paddingLeft="30dp" />
+
+        <EditText
+            android:id="@+id/fullnameRegister"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="270dp"
+            android:background="#83D25A63"
+            android:fontFamily="@font/monsterratregular"
+            android:hint="Введите полное имя: "
+            android:paddingLeft="30dp" />
+
+
+        <TextView
+            android:id="@+id/wrongRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="330dp"
+            android:fontFamily="@font/monsterratregular"
+            android:text="Заполните все поля!"
+            android:textAlignment="center"
+            android:textColor="#FF0013"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="445dp"
+            android:backgroundTint="@color/white_red"
+            android:fontFamily="@font/monsterratregular"
+            android:onClick="registerUser"
+            android:text="ЗАРЕГЕСТРИРОВАТЬСЯ"
+            android:textSize="16sp" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

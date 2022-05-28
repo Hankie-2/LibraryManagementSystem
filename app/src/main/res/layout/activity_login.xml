@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1a1115"
+    tools:context=".authentication.LoginActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/monsterratbold"
+        android:text="Sacred Knowledge"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="350dp"
+        android:layout_height="500dp"
+        app:cardBackgroundColor="#2b1f22"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:text="Авторизация"
+            android:textSize="26sp"
+            android:layout_marginTop="50dp"
+            android:textAlignment="center"
+            android:fontFamily="@font/monsterratregular"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/usernameSignIn"
+            android:layout_marginTop="150dp"
+            android:hint="Введите логин: "
+            android:fontFamily="@font/monsterratregular"
+            android:paddingLeft="30dp"
+            android:background="#83D25A63"
+            android:layout_width="300dp"
+            android:layout_marginLeft="25dp"
+            android:layout_height="50dp"/>
+
+        <EditText
+            android:id="@+id/passwordSignIn"
+            android:layout_marginTop="250dp"
+            android:hint="Введите пароль: "
+            android:fontFamily="@font/monsterratregular"
+            android:paddingLeft="30dp"
+            android:inputType="textPassword"
+            android:background="#83D25A63"
+            android:layout_width="300dp"
+            android:layout_marginLeft="25dp"
+            android:layout_height="50dp"/>
+
+        <TextView
+            android:id="@+id/registrationText"
+            android:text="Зарегестрироваться"
+            android:textColor="#A9FFFFFF"
+            android:fontFamily="@font/monsterratregular"
+            android:textAlignment="center"
+            android:onClick="switchToRegistration"
+            android:layout_marginTop="420dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+
+        <TextView
+            android:id="@+id/wrong"
+            android:visibility="invisible"
+            android:text="Неправильный логин или пароль!"
+            android:textColor="#FF0013"
+            android:fontFamily="@font/monsterratregular"
+            android:textAlignment="center"
+            android:layout_marginTop="310dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/signInButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="445dp"
+            android:backgroundTint="@color/white_red"
+            android:fontFamily="@font/monsterratregular"
+            android:onClick="checkData"
+            android:text="ВОЙТИ"
+            android:textSize="16sp" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
